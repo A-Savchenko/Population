@@ -73,7 +73,10 @@ public class Population {
         readTxt();
         printMenu();
         boolean gameOn = true;
+        int c = 0; 
         while(gameOn){
+			System.out.println(); 
+			if(c != 0)printMenu(); 
             System.out.println();
             int choice = Prompt.getInt("Enter your selection ");
             System.out.println();
@@ -137,6 +140,7 @@ public class Population {
             header();
             for (int i = 0; i<50; i++) System.out.printf("%3d: %-3s\n",i+1,cities.get(i));
             System.out.println(String.format("The time taken for the sort: %s milliseconds.", endMillisec-startMillisec));
+			c++; 
         }
     }
 
